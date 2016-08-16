@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en' ng-app="ccApp" ng-controller='mainCtrl'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Countries and Capitals App</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css" />
+
+    <link rel='stylesheet' href='css/style.css'>
+
+</head>
+
+<body ng class="{loading: isloading}">
+
+    <header class='gradient'>
+        <div class='main-title'>
+            <a href='#/home'><span id='title'>Countries and Capitals</span></a>
+        </div>
+    </header>
+
+    <div class='animate-view-container'>
+        <div ng-view class='animate-view'></div>
+    </div>
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
+
+</body>
+
+</html>

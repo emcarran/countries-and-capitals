@@ -1,0 +1,52 @@
+/*CSS Styles*/
+
+html {
+    position: relative;
+}
+
+body {
+    font-family: monospace;
+    background-color: #ccc;
+}
+
+header {
+    background-color: darkslategray;
+    position: relative;
+    box-shadow: 0 2px 3px #999;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.gradient {
+    background: -webkit-linear-gradient(darkslategray, #242020);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(darkslategray, #242020);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(darkslategray, #242020);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(darkslategray, #242020);
+    /* Standard syntax */
+}
+
+.main-title {
+    position: relative;
+    width: 80&;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.animate-view-container {
+    position: relative;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem 1rem 0;
+}
