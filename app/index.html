@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang='en' ng-app="ccApp" ng-controller='mainCtrl'>
+<html lang='en' ng-app='ccApp' ng-controller='mainCtrl'>
 
 <head>
     <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Countries and Capitals App</title>
     <!-- styles -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css" />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css' />
 
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,400ita3lic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='css/style.css'>
 
 </head>
 
-<body ng class="{loading: isloading}">
+<body ng class='{loading: isloading}'>
 
     <header class='gradient'>
         <div class='main-title'>
@@ -22,15 +25,16 @@
         </div>
     </header>
 
-    <div class='animate-view-container'>
-        <div ng-view class='animate-view'></div>
+    <div class='container'>
+        <div ng-view class='fade'></div>
     </div>
     <!-- scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.5.1/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 
 </html>

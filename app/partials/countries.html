@@ -1,0 +1,36 @@
+<!--create a table for the countries data-->
+<div id='table-header' class='gradient'>
+    <label id='table-search'>Search by Country Name:
+        <input ng-model='search.countryName'>
+    </label>
+    <table border=1>
+        <tr>
+            <th>Name</th>
+            <th>Country Code</th>
+            <th>Capital</th>
+            <th>Area in km2</th>
+            <th>Population</th>
+            <th>Continent Code</th>
+        </tr>
+
+        <div class='content'>
+            <table class='table table-striped table-hover'>
+                <tbody class='table-body'>
+                    <tr ng-repeat='country in countries | orderBy: "name"' ng-click='showDetail(country)'>
+                        <td>{{ country.countryName}}</td>
+                        <td>{{ country.countryCode }}</td>
+                        <td>{{ country.capital }}</td>
+                        <td>{{ country.areaInSqKm | number}}</td>
+                        <td>{{ country.population} | number}</td>
+                        <td>{{ country.continentCode }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </table>
+
+</div>
+
+<a class='white' href='#/home'>
+    <div class='button'>Back to Home</div>
+</a>

@@ -2,11 +2,22 @@
 
 html {
     position: relative;
+    min-height: 100%;
 }
 
 body {
     font-family: monospace;
+    min-width: 750px;
     background-color: #ccc;
+    margin: 0 0 40em;
+}
+
+.container {
+    position: relative;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem 1rem 0;
 }
 
 header {
@@ -29,6 +40,11 @@ header {
     /* Standard syntax */
 }
 
+.heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 .main-title {
     position: relative;
     width: 80&;
@@ -43,10 +59,39 @@ header {
     color: whitesmoke;
 }
 
-.animate-view-container {
+.content {
     position: relative;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1rem 1rem 0;
+    max-height: 20rem;
+    overflow: auto;
+    font-size: 1.5rem;
+    border: 1px solid gray;
+}
+
+.home {
+    margin-top: 2rem;
+    border: 1px solid gray;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 2px 3px #999;
+}
+
+.paragraph {
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.button {
+    border-radius: 5px;
+    position: relative;
+    font-size: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: darkslategray;
+    color: white;
+    float: right;
+}
+
+a.white {
+    color: white;
 }
