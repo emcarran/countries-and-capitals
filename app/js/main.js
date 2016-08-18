@@ -1,4 +1,4 @@
-var app = angular.module('ccApp', ['ngRoute', 'ngAnimate']);
+var app = angular.module('ccApp', ['DataServices', 'Data', 'ngRoute', 'ngAnimate']);
 
 //inject a $routeProvide and use it to set URL routing rules
 app.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {

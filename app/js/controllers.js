@@ -1,4 +1,4 @@
-var app = angular.module('ccApp')
+var app = angular.module('ccApp');
 
 app.controller('mainController', ['$scope', 'countryData', function ($scope, countryData) {}])
 
@@ -29,7 +29,7 @@ app.controller('countriesController', ['$scope', '$location', '$filter', 'countr
 
   }])
 
-app.controller('detailsController', ['$scope', 'countryData', function ($scope, countryData) {
+app.controller('detailsController', ['$scope', '$route', 'countryData', function ($scope, $route, countryData) {
 
     countryData.getCountry($route.current.params.countryCode).then(function (result) {
         $scope.country = result[0];
@@ -40,8 +40,9 @@ app.controller('detailsController', ['$scope', 'countryData', function ($scope, 
         $scope.capital = result;
         $scope.capitalPopulation = $scope.capital.population;
     });
+
     countryData.getNeighbors($route.curent.params.countryCode).then(function (result) {
-        $scope.neighbors = result.geo 1 names;
+        $scope.neighbors = result.geonames;
     });
 
     //toLowerCase will make flag visible even with lower case country code
