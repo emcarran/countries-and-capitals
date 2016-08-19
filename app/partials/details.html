@@ -1,28 +1,29 @@
-<div class="details-content">
+<div class='details-content'>
+
     <div id='country-box'>
-        <div class='title country-title'>{{ country.countryName }}</div>
+        <div class='title country-title'>{{country.countryName}}</div>
         <div class='details-box'>
             <dl>
                 <dt>Populaton of Country:</dt>
                 <dd>{{country.population | number}}</dd>
 
                 <dt>Area (km<sup>2</sup>):</dt>
-                <dd>{{country.areaInSqKm}}</dd>
+                <dd>{{country.areaInSqKm | number}}</dd>
 
                 <dt>Capital:</dt>
-                <dd>{{country.capital}</dd>
+                <dd>{{country.capital}}</dd>
 
                 <dt>Population of Capital:</dt>
-                <dd>{{country.capitalPopulation | number}}}</dd>
+                <dd>{{capitalPopulation | number}}</dd>
 
                 <dt>Continent:</dt>
                 <dd>{{country.continentName}}</dd>
 
                 <dt>{{neighbors.length}} neighbors:</dt>
                 <br>
-                <dd id='neighbors-list dd'>
+                <dd id='neighbors-list-dd'>
                     <ul id='neighbors-list' ng-repeat='neighbor in neighbors'>
-                        <li><a ng-href='#/countries/{ {neighbor.countryCode | uppercase }}'>{{country.countryNeighbors}}</a></li>
+                        <li><a ng-href='#/countries/{{neighbor.countryCode | uppercase }}'>{{ neighbor.countryName }}</a></li>
                     </ul>
                 </dd>
             </dl>

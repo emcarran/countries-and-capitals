@@ -41,8 +41,9 @@ header {
 }
 
 .heading {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
+    margin-left: 1rem;
 }
 
 .main-title {
@@ -79,23 +80,33 @@ header {
     border-radius: 1em;
     background-color: rgba(255, 255, 255, .9);
     box-shadow: 0 2px 3px #999;
+    padding-bottom: 1.5rem;
 }
 
 .paragraph {
+    margin-left: 1rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
     color: black;
+    font-size: 1.5rem;
+    font-family: sans-serif;
 }
 
 .button {
     border-radius: 5px;
     position: relative;
-    font-size: 0.7rem;
     padding-left: 1rem;
     padding-right: 1rem;
     background-color: darkslategray;
     color: white;
+    padding-top: 0.4;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
     float: right;
+}
+
+.button:hover {
+    background-color: dimgray;
 }
 
 a.white {
@@ -156,9 +167,19 @@ tbody {
     box-shadow: 0 2px 3px #999;
 }
 
+th:first-child {
+    padding-left: 2em;
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    padding-left: 2em;
+    border-top-right-radius: 10px;
+}
+
 th {
     padding-left: 2em;
-    background-color: #453E3E;
+    background-color: darkslategray;
     color: #eee;
 }
 
@@ -172,9 +193,35 @@ td {
     width: 17.82% !important;
     overflow: auto;
     padding-left: 1em;
+    color: black;
+}
+
+td:nth-child(2) {
+    width: 10.5% !important;
 }
 
 .country-name {
     color: black;
     font-weight: 600;
+}
+
+dl {
+    margin-top: 2em;
+}
+
+dt {
+    float: left;
+    text-align: center;
+    font-weight: bold;
+}
+
+dd {
+    padding: 0 0 1em 0;
+    text-indent: .5em;
+    margin-left: 2em;
+}
+
+ul {
+    list-style: none;
+    margin-left: 1em;
 }

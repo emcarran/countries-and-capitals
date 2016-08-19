@@ -26,6 +26,10 @@ app.controller('countriesController', ['$scope', '$location', '$filter', 'countr
         country.population = parseFloat(country.population);
     });
 
+    $scope.startsWith = function (actual, expected) {
+        var lowerStr = (actual + "").toLowerCase();
+        return lowerStr.indexOf(expected.toLowerCase()) === 0;
+    };
 
   }])
 
@@ -34,14 +38,14 @@ app.controller('detailsController', ['$scope', '$route', 'countryData', function
     countryData.getCountry($route.current.params.countryCode).then(function (result) {
         $scope.country = result[0];
         console.log($scope.country);
-
     });
+
     countryData.getCapitals($route.current.params.countryCode).then(function (result) {
         $scope.capital = result;
         $scope.capitalPopulation = $scope.capital.population;
     });
 
-    countryData.getNeighbors($route.curent.params.countryCode).then(function (result) {
+    countryData.getNeighbors($route.current.params.countryCode).then(function (result) {
         $scope.neighbors = result.geonames;
     });
 
