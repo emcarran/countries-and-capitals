@@ -37,7 +37,7 @@ app.controller('detailsController', ['$scope', '$route', 'countryData', function
 
     countryData.getCountry($route.current.params.countryCode).then(function (result) {
         $scope.country = result[0];
-        console.log($scope.country);
+        //console.log($scope.country);
     });
 
     countryData.getCapitals($route.current.params.countryCode).then(function (result) {
@@ -50,7 +50,8 @@ app.controller('detailsController', ['$scope', '$route', 'countryData', function
     });
 
     //toLowerCase will make flag visible even with lower case country code
-    $scope.flag.$route.current.params.countryCode.toLowerCase();
-    ////toUpperCase will make map visible even with lower case country code
-    $scope.map.$route.current.params.countryCode.toUpperCase();
+    $scope.flag = $route.current.params.countryCode.toLowerCase();
+
+    //toUpperCase will make map visible even with lower case country code
+    $scope.map = $route.current.params.countryCode.toUpperCase();
 }]);

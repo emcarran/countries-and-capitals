@@ -1,8 +1,7 @@
-var app = angular.module('ccApp', ['DataServices', 'Data', 'ngRoute', 'ngAnimate']);
+angular.module('ccApp', ['DataServices', 'Data', 'ngRoute', 'ngAnimate'])
 
-//inject a $routeProvide and use it to set URL routing rules
-app.config(['$locationProvider', '$routeProvider',
-            function ($locationProvider, $routeProvider) {
+.config(['$locationProvider', '$routeProvider',
+             function ($locationProvider, $routeProvider) {
         $routeProvider
             .when("/home", {
                 templateUrl: "./partials/home.html"
@@ -18,4 +17,4 @@ app.config(['$locationProvider', '$routeProvider',
             .otherwise({
                 redirectTo: '/home'
             });
-            }]);
+             }]);

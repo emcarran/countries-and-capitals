@@ -67,7 +67,7 @@ header {
 
 .content {
     position: relative;
-    max-height: 20rem;
+    max-height: 40rem;
     overflow: auto;
     font-size: 1.5rem;
     border: 1px solid gray;
@@ -103,10 +103,17 @@ header {
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
     float: right;
+    margin-right: 0.7rem;
 }
 
 .button:hover {
     background-color: dimgray;
+}
+
+.details-buttons {
+    position: relative;
+    clear: both;
+    margin-left: 2em;
 }
 
 a.white {
@@ -121,6 +128,23 @@ a.white {
     margin-right: auto;
 }
 
+.details-content {
+    position: relative;
+    width: auto;
+    min-height: 400px;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2.5em;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 2px 3px #999;
+}
+
 #country-box {
     position: relative;
     width: 50%;
@@ -133,6 +157,19 @@ a.white {
     width: 100%;
     margin-left: 2em;
     margin-top: 1em;
+}
+
+#neighbors-list-dd {
+    margin-left: 0;
+    text-indent: 0;
+}
+
+#neighbors-list {
+    display: inline-block;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: .8em;
+    padding-top: 0.5rem;
 }
 
 #image-box {
@@ -198,6 +235,12 @@ a.white {
     line-height: 3rem;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+}
+
+#table-header li {
+    display: inline-block;
+    width: auto;
+    padding-right: 10%;
 }
 
 #table-search {
