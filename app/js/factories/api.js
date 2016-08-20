@@ -5,13 +5,14 @@ var app = angular.module('DataServices', [])
 //key service for the entire app
 .factory('dataFactory', ['$http', '$route', '$q', function ($http, $route, $q) {
 
-    var username = 'toc5012';
-    var urlBase = 'http://api.geonames.org/';
+    var username = "toc5012";
+    var urlBase = "http://api.geonames.org/";
+
     return {
+
         getCountries: function () {
             var defer = $q.defer();
-            var url = urlBase + 'countryInfoJSON';
-
+            var url = urlBase + "countryInfoJSON";
             var request = {
                 callback: 'JSON_CALLBACK',
                 username: username
@@ -37,14 +38,12 @@ var app = angular.module('DataServices', [])
                 console.log(status + " error attempting to access geonames.org.");
                 defer.reject();
             });
-
             return defer.promise;
         },
 
         getCountry: function (countryCode) {
             var defer = $q.defer();
-            var url = urlBase + 'countryInfoJSON';
-
+            var url = urlBase + "countryInfoJSON";
             var request = {
                 callback: 'JSON_CALLBACK',
                 country: countryCode,
@@ -52,15 +51,14 @@ var app = angular.module('DataServices', [])
             };
 
             $http({
-                method: 'JSONP',
-                url: url,
-                params: request,
-                cache: true
-            })
-
-            .success(function (data, status, headers, config) {
-                defer.resolve(data.geonames);
-            })
+                    method: 'JSONP',
+                    url: url,
+                    params: request,
+                    cache: true
+                })
+                .success(function (data, status, headers, config) {
+                    defer.resolve(data.geonames);
+                })
 
             .error(function (data, status, headers, config) {
                 console.log(status + " error attempting to get country from geonames.org.");
@@ -72,7 +70,7 @@ var app = angular.module('DataServices', [])
 
         getNeighbors: function (countryCode) {
             var defer = $q.defer();
-            var url = urlBase + 'neighboursJSON';
+            var url = urlBase + "neighboursJSON";
             var request = {
                 callback: 'JSON_CALLBACK',
                 country: countryCode,
@@ -100,10 +98,10 @@ var app = angular.module('DataServices', [])
 
         getCapitals: function (countryCode) {
             var defer = $q.defer();
-            var url = urlBase + 'searchJSON';
+            var url = urlBase + "searchJSON";
             var request = {
                 callback: 'JSON_CALLBACK',
-                q: 'capital',
+                q: "capital",
                 formatted: true,
                 country: countryCode,
                 maxRows: 1,
@@ -121,7 +119,7 @@ var app = angular.module('DataServices', [])
                 defer.resolve(data.geonames[0]);
             })
 
-            .error(function (data, status, headeer, config) {
+            .error(function (data, status, headers, config) {
                 console.log(status + " error attempting to access geonames.org.");
                 defer.reject();
             });
@@ -129,5 +127,4 @@ var app = angular.module('DataServices', [])
             return defer.promise;
         }
     };
-
-            }]);
+}]);

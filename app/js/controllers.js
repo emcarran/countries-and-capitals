@@ -26,27 +26,27 @@ app.controller('countriesController', ['$scope', '$location', '$filter', 'countr
         country.population = parseFloat(country.population);
     });
 
-
   }])
 
 app.controller('detailsController', ['$scope', '$route', 'countryData', function ($scope, $route, countryData) {
 
     countryData.getCountry($route.current.params.countryCode).then(function (result) {
         $scope.country = result[0];
-        console.log($scope.country);
-
+        //console.log($scope.country);
     });
+
     countryData.getCapitals($route.current.params.countryCode).then(function (result) {
         $scope.capital = result;
         $scope.capitalPopulation = $scope.capital.population;
     });
 
-    countryData.getNeighbors($route.curent.params.countryCode).then(function (result) {
+    countryData.getNeighbors($route.current.params.countryCode).then(function (result) {
         $scope.neighbors = result.geonames;
     });
 
     //toLowerCase will make flag visible even with lower case country code
-    $scope.flag.$route.current.params.countryCode.toLowerCase();
-    ////toUpperCase will make map visible even with lower case country code
-    $scope.map.$route.current.params.countryCode.toUpperCase();
+    $scope.flag = $route.current.params.countryCode.toLowerCase();
+
+    //toUpperCase will make map visible even with lower case country code
+    $scope.map = $route.current.params.countryCode.toUpperCase();
 }]);
