@@ -103,7 +103,8 @@ header {
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
     float: right;
-    margin-right: 0.7rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
 }
 
 .button:hover {
@@ -191,6 +192,7 @@ a.white {
 #flag-img {
     width: 150px;
     height: 100px;
+    margin-right: 20px;
 }
 
 #map-img {

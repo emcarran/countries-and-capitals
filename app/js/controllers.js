@@ -26,11 +26,6 @@ app.controller('countriesController', ['$scope', '$location', '$filter', 'countr
         country.population = parseFloat(country.population);
     });
 
-    $scope.startsWith = function (actual, expected) {
-        var lowerStr = (actual + "").toLowerCase();
-        return lowerStr.indexOf(expected.toLowerCase()) === 0;
-    };
-
   }])
 
 app.controller('detailsController', ['$scope', '$route', 'countryData', function ($scope, $route, countryData) {
