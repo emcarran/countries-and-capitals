@@ -6,7 +6,7 @@ var app = angular.module('DataServices', [])
 .factory('dataFactory', ['$http', '$route', '$q', function ($http, $route, $q) {
 
     var username = "toc5012";
-    var urlBase = "http://api.geonames.org/";
+    var urlBase = "https://api.geonames.org/";
 
     return {
 
