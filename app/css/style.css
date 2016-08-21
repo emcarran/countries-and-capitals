@@ -332,8 +332,8 @@ ul {
     right: 0;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.9)no-repeat center center;
-    background-image: url('img/loading-animation.gif');
+    background-image: url('../img/loading-animation.gif');
+    background: rgba(255, 255, 255, 0.9) no-repeat center center;
 }
 
 .animate-view {
